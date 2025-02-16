@@ -1,81 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chandrika Joshi | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            text-align: center;
-            padding: 50px 0;
-        }
-        h1 {
-            color: #0078ff;
-        }
-        .projects {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .project-card {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            width: 300px;
-            transition: 0.3s;
-        }
-        .project-card:hover {
-            transform: scale(1.05);
-        }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            color: white;
-            background: #0078ff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-        .btn:hover {
-            background: #005bb5;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Chandrika Joshi</h1>
-        <p>Data Scientist | ML & AI Enthusiast | Creative Coder</p>
-        
-        <h2>Projects</h2>
-        <div class="projects">
-            <div class="project-card">
-                <h3>Power BI - Sales Dashboard</h3>
-                <p>Analyzed and visualized sales data for business insights.</p>
-                <a href="#" class="btn">View Project</a>
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+
+export default function Portfolio() {
+  return (
+    <div className="min-h-screen bg-gray-100 p-6">
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="max-w-4xl mx-auto"
+      >
+        <Card className="bg-white p-6 rounded-2xl shadow-lg">
+          <div className="flex flex-col md:flex-row items-center">
+            <motion.img
+              src="/avatar.png"
+              alt="Avatar"
+              className="w-40 h-40 rounded-full mb-4 md:mb-0 md:mr-6"
+              initial={{ scale: 0.8 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.4 }}
+            />
+            <div>
+              <h1 className="text-4xl font-bold">Chandrika Joshi</h1>
+              <p className="text-gray-600 text-lg">Data Scientist & AI Enthusiast</p>
+              <p className="mt-2 text-gray-500">
+                Passionate about ML, AI, and creative tech solutions. Always learning and building.
+              </p>
+              <div className="flex gap-4 mt-4">
+                <Button variant="outline" className="flex items-center gap-2">
+                  <FaGithub /> GitHub
+                </Button>
+                <Button variant="outline" className="flex items-center gap-2">
+                  <FaLinkedin /> LinkedIn
+                </Button>
+              </div>
             </div>
-            <div class="project-card">
-                <h3>Mercedes-Benz Price Prediction</h3>
-                <p>Used ML models to predict car prices with high accuracy.</p>
-                <a href="#" class="btn">View Project</a>
-            </div>
-            <div class="project-card">
-                <h3>Custom AI Copilot</h3>
-                <p>Built an AI assistant integrating LLaMA and GPT.</p>
-                <a href="#" class="btn">View Project</a>
-            </div>
+          </div>
+        </Card>
+        <div className="mt-6 grid md:grid-cols-2 gap-6">
+          <Card className="p-4 bg-white shadow-md rounded-xl">
+            <h2 className="text-2xl font-semibold">Experience</h2>
+            <p className="text-gray-500">Google Arcade, Mood Indigo, Porsche, Visa, etc.</p>
+          </Card>
+          <Card className="p-4 bg-white shadow-md rounded-xl">
+            <h2 className="text-2xl font-semibold">Projects</h2>
+            <p className="text-gray-500">LLM Copilot, Alzheimer's Detection, Anizen, AnimeCiencia.</p>
+          </Card>
         </div>
+      </motion.div>
     </div>
-</body>
-</html>
+  );
+}
