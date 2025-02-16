@@ -4,68 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chandrika Joshi | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding: 50px 0;
+        }
+        h1 {
+            color: #0078ff;
+        }
+        .projects {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .project-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 300px;
+            transition: 0.3s;
+        }
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background: #0078ff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #005bb5;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Chandrika Joshi</h1>
-            <p>Data Scientist | ML & AI Enthusiast | Creative Coder</p>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>Hi! I'm Chandrika, a passionate Data Scientist with a love for AI, ML, and creative projects. I enjoy solving real-world problems through data and technology.</p>
-        </div>
-    </section>
-    
-    <section id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project-grid">
-                <div class="project">
-                    <h3>Power BI - Sales Dashboard</h3>
-                    <p>Analyzed and visualized sales data for better business insights.</p>
-                    <a href="https://github.com/Chandrikajoshi123/Sales-Dashboard" target="_blank">View Project</a>
-                </div>
-                <div class="project">
-                    <h3>Mercedes-Benz Price Prediction</h3>
-                    <p>Used ML models to predict car prices with high accuracy.</p>
-                    <a href="https://github.com/Chandrikajoshi123/Mercedes-Benz-Prediction" target="_blank">View Project</a>
-                </div>
-                <div class="project">
-                    <h3>Custom AI Copilot</h3>
-                    <p>Built an AI-powered assistant integrating LLaMA and GPT.</p>
-                    <a href="https://github.com/Chandrikajoshi123/Custom-Copilot" target="_blank">View Project</a>
-                </div>
+    <div class="container">
+        <h1>Chandrika Joshi</h1>
+        <p>Data Scientist | ML & AI Enthusiast | Creative Coder</p>
+        
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project-card">
+                <h3>Power BI - Sales Dashboard</h3>
+                <p>Analyzed and visualized sales data for business insights.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>Mercedes-Benz Price Prediction</h3>
+                <p>Used ML models to predict car prices with high accuracy.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>Custom AI Copilot</h3>
+                <p>Built an AI assistant integrating LLaMA and GPT.</p>
+                <a href="#" class="btn">View Project</a>
             </div>
         </div>
-    </section>
-    
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>Let's connect and collaborate!</p>
-            <a href="https://linkedin.com/in/chandrika-j-0b1a98238" target="_blank" class="btn">LinkedIn</a>
-            <a href="mailto:your.email@example.com" class="btn">Email Me</a>
-        </div>
-    </section>
-    
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Chandrika Joshi. All rights reserved.</p>
-        </div>
-    </footer>
+    </div>
 </body>
 </html>
->
