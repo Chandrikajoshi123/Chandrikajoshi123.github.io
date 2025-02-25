@@ -1,56 +1,30 @@
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { TypeAnimation } from "react-type-animation";
+import { Button } from "@/components/ui/button";
 
 export default function Portfolio() {
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
+    <div className="bg-black text-white min-h-screen flex flex-col items-center justify-center p-6">
+      <motion.h1
+        initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="max-w-4xl mx-auto"
+        transition={{ duration: 1 }}
+        className="text-5xl font-bold text-center"
       >
-        <Card className="bg-white p-6 rounded-2xl shadow-lg">
-          <div className="flex flex-col md:flex-row items-center">
-            <motion.img
-              src="/avatar.png"
-              alt="Avatar"
-              className="w-40 h-40 rounded-full mb-4 md:mb-0 md:mr-6"
-              initial={{ scale: 0.8 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.4 }}
-            />
-            <div>
-              <h1 className="text-4xl font-bold">Chandrika Joshi</h1>
-              <p className="text-gray-600 text-lg">Data Scientist & AI Enthusiast</p>
-              <p className="mt-2 text-gray-500">
-                Passionate about ML, AI, and creative tech solutions. Always learning and building.
-              </p>
-              <div className="flex gap-4 mt-4">
-                <Button variant="outline" className="flex items-center gap-2">
-                  <FaGithub /> GitHub
-                </Button>
-                <Button variant="outline" className="flex items-center gap-2">
-                  <FaLinkedin /> LinkedIn
-                </Button>
-              </div>
-            </div>
-          </div>
-        </Card>
-        <div className="mt-6 grid md:grid-cols-2 gap-6">
-          <Card className="p-4 bg-white shadow-md rounded-xl">
-            <h2 className="text-2xl font-semibold">Experience</h2>
-            <p className="text-gray-500">Google Arcade, Mood Indigo, Porsche, Visa, etc.</p>
-          </Card>
-          <Card className="p-4 bg-white shadow-md rounded-xl">
-            <h2 className="text-2xl font-semibold">Projects</h2>
-            <p className="text-gray-500">LLM Copilot, Alzheimer's Detection, Anizen, AnimeCiencia.</p>
-          </Card>
-        </div>
-      </motion.div>
+        Hi, I am Chandrika Joshi
+      </motion.h1>
+      <TypeAnimation
+        sequence={["Aspiring Data Scientist", 1000]}
+        wrapper="h2"
+        className="text-3xl text-blue-400 font-semibold mt-4"
+        speed={50}
+        repeat={Infinity}
+      />
+      <div className="mt-6 flex gap-4">
+        <Button className="bg-blue-500 text-white px-6 py-3 rounded-lg text-lg hover:bg-blue-600">Hire Me</Button>
+        <Button className="bg-green-500 text-white px-6 py-3 rounded-lg text-lg hover:bg-green-600">My Work</Button>
+      </div>
     </div>
   );
 }
